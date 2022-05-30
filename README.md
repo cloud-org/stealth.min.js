@@ -2,12 +2,16 @@
 
 selenium 过环境检测
 
+```sh
+npx extract-stealth-evasions
+```
+
 ```python
-with open(path+'/stealth.min.js') as f:
-    js = f.read()
+with open('./stealth.min.js') as f:
+    inject_js = f.read()
 
 driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-  "source": js 
+  "source": inject_js 
 })
 ```
 
@@ -25,3 +29,4 @@ driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
 
 - https://blog.csdn.net/weixin_42453905/article/details/122086184
 - http://fengpiaoxus.com/blog/detail/3/
+- https://github.com/berstend/puppeteer-extra/tree/master/packages/extract-stealth-evasions#readme
